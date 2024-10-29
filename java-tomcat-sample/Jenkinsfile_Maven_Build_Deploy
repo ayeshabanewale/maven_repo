@@ -10,7 +10,7 @@ pipeline {
         maven 'Maven_Local'
     }
     parameters {
-        string(name: 'SDLC_ENV', defaultValue: '', description: 'Enter SDLC Environment')
+        string(name: 'SDLC_ENV', choices: ['dev','qa','prod'], description: 'Enter SDLC Environment')
     }
     stages {
         stage('Build') {
